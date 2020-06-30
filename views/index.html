@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Account</title>
+    <link rel="stylesheet" href="/style/home.css">
+    <link rel="stylesheet" href="/style/responsive.css">
+</head>
+
+<body class="bg-secondary">
+    <div class="conteiner-fluid">
+        <h1>My transactions</h1>
+        <hr>
+        <div class="col-10">
+            <h2>Transactions</h2>
+            <table class="table table-dark table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>value</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <tr>
+                        <td>1</td>
+                        <td>Name test</td>
+                        <td>Type test</td>
+                        <td class="text-danger">Value test</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="cards">
+                <div id="" class="card text-white bg-success mb-3" style=" width: 200px; box-shadow: 5px 5px rgba(0, 0, 0, 0.425);">
+                    <div class="card-header">Account income</div>
+                    <div class="card-body">
+                        <h5 class="card-title">+1000</h5>   
+                    </div>
+                </div>
+                <div class="card text-white bg-danger mb-3" style="width: 200px; box-shadow: 5px 5px rgba(0, 0, 0, 0.425);">
+                    <div class="card-header">Account outcome</div>
+                    <div class="card-body">
+                        <h5 class="card-title">-1000</h5>
+                    </div>
+                </div>
+                <div class="card text-white bg-dark mb-3" style=" width: 200px; box-shadow: 5px 5px rgba(0, 0, 0, 0.425);">
+                    <div class="card-header">Account belance</div>
+                    <div class="card-body">
+                        <h5 class="card-title">50000</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

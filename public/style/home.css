@@ -1,0 +1,17 @@
+h1{
+    margin-top: 3%;
+}
+
+.col-10{
+    margin-left: 8%;
+}
+
+.cards{
+    display: flex; 
+    justify-content: space-around;
+}
+
+.table{
+    border-radius: 8px;
+    
+}
