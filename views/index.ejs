@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Account</title>
+    <link rel="stylesheet" href="/style/home.css">
+    <link rel="stylesheet" href="/style/dark-mode.css">
+    <link rel="stylesheet" href="/style/responsive.css">
+</head>
+
+<body >
+    <div class="conteiner-fluid">
+        <h1>My transactions</h1>
+        <hr>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="darkSwitch">
+            <label class="custom-control-label" for="darkSwitch"><i class="fa fa-moon-o" aria-hidden="true"></i></label>
+        </div>
+
+        <div class="col-10">
+            <h2>Transactions</h2>
+            <table class="table table-dark table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>value</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <tr>
+                        <td>1</td>
+                        <td>Name test</td>
+                        <td>Type test</td>
+                        <td class="text-danger">Value test</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="cards">
+                <div id="" class="card text-white bg-success mb-3"
+                    style=" width: 200px; box-shadow: 5px 5px rgba(0, 0, 0, 0.425);">
+                    <div class="card-header">Account income</div>
+                    <div class="card-body">
+                        <h5 class="card-title">+1000</h5>
+                    </div>
+                </div>
+                <div class="card text-white bg-danger mb-3"
+                    style="width: 200px; box-shadow: 5px 5px rgba(0, 0, 0, 0.425);">
+                    <div class="card-header">Account outcome</div>
+                    <div class="card-body">
+                        <h5 class="card-title">-1000</h5>
+                    </div>
+                </div>
+                <div class="card text-white bg-dark mb-3"
+                    style=" width: 200px; box-shadow: 5px 5px rgba(0, 0, 0, 0.425);">
+                    <div class="card-header">Account belance</div>
+                    <div class="card-body">
+                        <h5 class="card-title">50000</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="/js/dark-mode-switch.min.js"></script>
+</body>
+
+</html>
