@@ -1,0 +1,13 @@
+node_modules
+app.js
+app.js.map
+conta.js
+conta.js.map
+home.js
+home.js.map
+sql.js
+sql.js.map
+sqlPool.js
+sqlPool.js.map
+appsettings.js
+appsettings.js.map
