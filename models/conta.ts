@@ -3,16 +3,20 @@ import Sql = require ('../infra/sql')
 
 
 export = class Transaction {
-    public id: number;
-    public name: string;
-    public type: string;
-    public value: number;
+    public id: number
+    public name: string
+    public type: string
+    public value: number
+    public date: Date
+    
 
-    public constructor (id: number, name: string, type: string, value: number){
+    public constructor (id: number, name: string, type: string, value: number, date: Date){
         this.id = id
         this.name = name
         this.type = type
         this.value = value
+        this.date = date
+        
     }
 
     private static validar(transaction: Transaction): string{
@@ -47,8 +51,8 @@ export = class Transaction {
         await Sql.conectar(async (sql: Sql) => {
 
             try{
-                await sql.query(`INSERT INTO transactions (nome, tipo, valor)
-                 VALUES (?, ?, ?)`, [transaction.name, transaction.type, transaction.value])
+                await sql.query(`INSERT INTO transactions (nome, tipo, valor, dia)
+                 VALUES (?, ?, ?. ?)`, [transaction.name, transaction.type, transaction.value, transaction.date])
 
                  transaction.id = await sql.scalar('SELECT last_insert_id()') as number
             } catch (e){
