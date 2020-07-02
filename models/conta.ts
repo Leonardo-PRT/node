@@ -52,7 +52,7 @@ export = class Transaction {
 
             try{
                 await sql.query(`INSERT INTO transactions (nome, tipo, valor, dia)
-                 VALUES (?, ?, ?. ?)`, [transaction.name, transaction.type, transaction.value, transaction.date])
+                 VALUES (?, ?, ?, CURDATE() )`, [transaction.name, transaction.type, transaction.value,])
 
                  transaction.id = await sql.scalar('SELECT last_insert_id()') as number
             } catch (e){
