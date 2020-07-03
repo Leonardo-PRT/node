@@ -9,8 +9,5 @@ router.get('/', (req, res) => {
 
 })
 
-router.get('/nova-transacao', (req, res) =>{
-    res.render('nova-trans')
-})
 
 export = router
