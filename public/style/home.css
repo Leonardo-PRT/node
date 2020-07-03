@@ -8,10 +8,32 @@ h1{
 
 .cards{
     display: flex; 
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .table{
     border-radius: 8px;
-    
+    overflow: hidden;   
+    border: 0;
+
+}.cabecalho{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.new-trans{
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 8px;
+
+}
+
+.custom-control{
+    margin-left: 5px;
+}
+
+.bi{
+    padding-top: 1px;
+   padding-bottom: 3px;
 }

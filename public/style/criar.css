@@ -1,0 +1,47 @@
+h1{
+    margin-top: 3%;
+}
+
+.field-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    background-color: rgb(230, 230, 230);
+    color: black;
+}
+
+.field{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.table{
+    margin-top: 5%;
+    margin-left: 25%;
+    width: 50%;
+    border-radius: 8px;
+
+}
+
+label{
+    font-size: 20px;
+}
+
+input{
+    border-radius: 8px;
+    border: 0;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.div-botao{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.botao{
+    margin-bottom: 10px;
+}

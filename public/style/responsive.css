@@ -1,7 +1,36 @@
-@media(max-width: 500px ){
+@media(max-width: 777px ){
     .cards{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        margin-left: 20%;
+        
+    }
+
+    .card{
+      width: 80%;
+      height: 130px;
+      text-align: center;
+      font-size: 18px;
+        
+    }
+    .card-header{
+        font-size: 18px;
+        height: 30px;
+        padding-bottom: 30px;
     }
 }
+
+@media(max-width: 390px ){
+    .card-header{
+        padding-bottom: 50px;
+    }
+
+    .table{
+        font-size: 14px;
+    }
+
+    .col-10{
+        margin-left: 0px;
+    }
+}
+
