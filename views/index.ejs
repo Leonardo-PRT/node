@@ -1,70 +1,65 @@
+<h1>Minhas transações</h1>
+<hr>
+<div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input" id="darkSwitch">
+    <label class="custom-control-label" for="darkSwitch"><i class="fa fa-moon-o" aria-hidden="true"></i></label>
+</div>
 
-        <h1>Minhas transações</h1>
-        <hr>
-        <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="darkSwitch">
-            <label class="custom-control-label" for="darkSwitch"><i class="fa fa-moon-o" aria-hidden="true"></i></label>
+<div class="col-10">
+
+    <div class="cabecalho">
+        <h2>Transações</h2>
+
+        <%- include('new-trans') %>
+
+    </div>
+    <div class="table-resposive">
+        <table class="table  table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Tipo</th>
+                    <th>valor</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr>
+                    <td>1</td>
+                    <td>Name test</td>
+                    <td>Type test</td>
+                    <td class="text-danger">Value test</td>
+                    <td>00/00/0000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="cards">
+        <div id="" class="card text-white bg-success mb-3" style=" box-shadow: 5px 5px rgba(0, 0, 0, 0.425);">
+            <div class="card-header">Entrou na conta</div>
+            <div class="card-body">
+                <h5 class="card-title">+1000</h5>
+            </div>
         </div>
-
-        <div class="col-10">
-
-            <div class="cabecalho">
-                <h2>Transações</h2>
-
-                <a href="/nova-transacao"><button class=" new-trans btn-primary"> <strong> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"/>
-                    <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"/>
-                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                  </svg> Criar transação </strong>  </button></a>
+        <div class="card text-white bg-danger mb-3" style=" box-shadow: 5px 5px rgba(0, 0, 0, 0.425);">
+            <div class="card-header">Saiu da conta</div>
+            <div class="card-body">
+                <h5 class="card-title">-1000</h5>
             </div>
-            <div class="table-resposive">
-                <table class="table table-dark table-hover table-striped">
-                    <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Nome</th>
-                            <th>Tipo</th>
-                            <th>valor</th>
-                            <th>Data</th>
-                        </tr>
-                    </thead>
-                    <tbody id="table-body">
-                        <tr>
-                            <td>1</td>
-                            <td>Name test</td>
-                            <td>Type test</td>
-                            <td class="text-danger">Value test</td>
-                            <td>00/00/0000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="cards">
-                <div id="" class="card text-white bg-success mb-3"
-                    style=" box-shadow: 5px 5px rgba(0, 0, 0, 0.425);">
-                    <div class="card-header">Entrou na conta</div>
-                    <div class="card-body">
-                        <h5 class="card-title">+1000</h5>
-                    </div>
-                </div>
-                <div class="card text-white bg-danger mb-3"
-                    style=" box-shadow: 5px 5px rgba(0, 0, 0, 0.425);">
-                    <div class="card-header">Saiu da conta</div>
-                    <div class="card-body">
-                        <h5 class="card-title">-1000</h5>
-                    </div>
-                </div>
-                <div class="card text-white bg-dark mb-3"
-                    style="  box-shadow: 5px 5px rgba(0, 0, 0, 0.425);">
-                    <div class="card-header">Total da conta</div>
-                    <div class="card-body">
-                        <h5 class="card-title">50000</h5>
-                    </div>
-                </div>
-            </div>
-
         </div>
-    
+        <div class="card text-white bg-dark mb-3" style="  box-shadow: 5px 5px rgba(0, 0, 0, 0.425);">
+            <div class="card-header">Total da conta</div>
+            <div class="card-body">
+                <h5 class="card-title">50000</h5>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
 <%- contentFor('styles') %>
 
 <title>Account</title>

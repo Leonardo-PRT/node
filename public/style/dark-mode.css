@@ -1,8 +1,8 @@
 [data-theme="dark"] {
     background-color: #2b2e31 !important;
     color: #eee;
-  }
   
+  }
   [data-theme="dark"] .bg-light {
     background-color: #333 !important;
   }
@@ -16,12 +16,16 @@
   }
 
   [data-theme="dark"] .table {
-    background-color: #5c5c5c !important;
+    background-color: #535252 !important;
     color: #FFF !important;
   }
 
-  .table{
-    background-color: rgb(230, 230, 230);
-    color: black;
+
+  [data-theme="dark"] .field{
+    color: white;
+  }
+
+  [data-theme="dark"] .modal-content{
+    background-color: rgb(71, 71, 71);
   }
 
