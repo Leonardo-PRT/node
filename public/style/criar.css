@@ -57,3 +57,9 @@ select{
 .modal-body, .modal-content{
     background-color: rgb(163, 163, 163);
 }
+
+.limpar{
+    margin-bottom: 10px;
+    margin-left: 85%;
+
+}

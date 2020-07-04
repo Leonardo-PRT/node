@@ -20,7 +20,7 @@
     }
 }
 
-@media(max-width: 390px ){
+@media(max-width: 400px ){
     .card-header{
         padding-bottom: 50px;
     }
@@ -31,6 +31,14 @@
 
     .col-10{
         margin-left: 0px;
+    }
+
+    .cabecalho{
+        flex-direction: column;
+    }
+
+    #add{
+        width: 30vw;
     }
 }
 

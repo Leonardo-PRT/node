@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-primary new-trans" data-toggle="modal" data-target="#exampleModal">
+<button type="button" class="btn btn-primary new-trans" data-toggle="modal" id="add" data-target="#exampleModal">
     Nova transação
 </button>
 
@@ -13,38 +13,80 @@
                 </button>
             </div>
             <div class="modal-body bg-light">
-                <fieldset>
-
+                <form class="needs-validation form" novalidate>
+                    <input type="reset" class="btn btn-secondary limpar" value="Limpar">
                     <div class="table table-hover table-striped">
                         <div class="field-group">
 
                             <div class="field ">
                                 <label for="name"> <strong> Nome da transação</strong> </label>
-                                <input type="text" name="name" required="required">
+                                <input type="text" name="name" class="form-control" id="id_do_form" required>
+                                <div class="valid-feedback">
+                                    Ok!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Incompleto
+                                </div>
                             </div>
-
-
-                            <div class="field">
-                                <label for="name"><strong> Tipo da transação </strong> </label>
-                                <select name="" > <option value="tal">Entrada</option> <option value="teltal">Saída</option> </select>
-                            </div>
-
 
 
                             <div class="field">
                                 <label for="address"> <strong> Valor </strong> </label>
-                                <input type="text" name="valor" id="money" required="required" >
+                                <input type="text" name="valor" id="money" class="form-control"  required>
+                                <div class="valid-feedback">
+                                    ok!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Incompleto
+                                </div>
                             </div>
+
+                            <div class="field">
+                                <label for="name"><strong> Tipo da transação </strong> </label>
+                                <select name=""class="custom-select" required>
+                                    <option value="" disabled selected >Selecione</option>
+                                    <option value="entrada">Entrada</option>
+                                    <option value="saida">Saída</option>
+                                </select>
+                            </div>
+                            
                         </div>
 
                     </div>
-                </fieldset>
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary ">Adicionar</button>
+                    <div style="text-align: center;">
+                    <button class="btn btn-secondary" data-dismiss="modal" > Cancelar </button>
+                    
+                    <button type="submit" class="btn btn-primary" >Adicionar</button>
+                    </div>
+                </form>
+
+            
             </div>
         </div>
     </div>
 </div>
+<script>
+
+    
+
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+        }, false);
+    })();
+    
+
+ </script>
