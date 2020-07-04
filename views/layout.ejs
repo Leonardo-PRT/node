@@ -13,7 +13,70 @@
     <div class="container-fluid">
 
         <%- body %>
+    
     </div>
 
     <%- include('scripts') %> 
+
+    <script>
+        $("#form").validate({
+            rules: {
+                name: {
+                    required: false,
+                    maxlength: 50
+                },
+                type: {
+                    required: false,
+                    maxlength: 50
+                },
+                money: {
+                    required: false
+                }
+            },
+
+            submitHandler: function (form) {
+                if ($.active) return
+
+                let name = $("#name")
+                let type = $("#type")
+                let amount = $("#money")
+
+                name = name.val()
+                type = type.val()
+                amount = parseFloat(amount.val())
+
+                var transaction = {
+                    name: name,
+                    type: type,
+                    value: amount
+                }
+
+                $.ajax({
+
+                    url: "/api/conta/criar",
+                    method: "post",
+                    data: JSON.stringify(transaction),
+
+                    processData: false,
+                    contentType: "application/json",
+
+                    success: function (dadosDeRetorno) {
+                        form.reset()
+                        setTimeout(() => { window.location = "/" }, 1)
+                    },
+    
+                    error: function (xhr) {
+
+                        try {
+                            alert(JSON.parse(xhr.responseText));
+                        } catch (err) {
+                            alert("Something went wrong");
+                        }
+
+                    }
+                })
+
+            }
+        })
+    </script>
 </body>

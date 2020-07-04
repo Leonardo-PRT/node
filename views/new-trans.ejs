@@ -7,86 +7,85 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Nova transação</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body bg-light">
-                <form class="needs-validation form" novalidate>
+
+
+                <form class="needs-validation " id="form" novalidate>
+
                     <input type="reset" class="btn btn-secondary limpar" value="Limpar">
+
                     <div class="table table-hover table-striped">
                         <div class="field-group">
 
                             <div class="field ">
                                 <label for="name"> <strong> Nome da transação</strong> </label>
-                                <input type="text" name="name" class="form-control" id="id_do_form" required>
+                                <input type="text" name="" class="form-control" id="name" required>
                                 <div class="valid-feedback">
                                     Ok!
                                 </div>
-                                <div class="invalid-feedback">
-                                    Incompleto
-                                </div>
+                            
                             </div>
 
 
                             <div class="field">
                                 <label for="address"> <strong> Valor </strong> </label>
-                                <input type="text" name="valor" id="money" class="form-control"  required>
+                                <input type="text" name="valor" id="money" class="form-control" required>
                                 <div class="valid-feedback">
                                     ok!
-                                </div>
-                                <div class="invalid-feedback">
-                                    Incompleto
                                 </div>
                             </div>
 
                             <div class="field">
                                 <label for="name"><strong> Tipo da transação </strong> </label>
-                                <select name=""class="custom-select" required>
-                                    <option value="" disabled selected >Selecione</option>
+                                <select name="" class="custom-select" required id="type">
+                                    <option value="" disabled selected>Selecione</option>
                                     <option value="entrada">Entrada</option>
                                     <option value="saida">Saída</option>
                                 </select>
                             </div>
-                            
+
                         </div>
 
                     </div>
 
                     <div style="text-align: center;">
-                    <button class="btn btn-secondary" data-dismiss="modal" > Cancelar </button>
-                    
-                    <button type="submit" class="btn btn-primary" >Adicionar</button>
+                        <button class="btn btn-secondary" data-dismiss="modal"> Cancelar </button>
+
+                        <button type="submit" class="btn btn-primary">Adicionar</button>
                     </div>
                 </form>
 
-            
+
             </div>
         </div>
     </div>
 </div>
 <script>
 
-    
+
 
     (function () {
         'use strict';
         window.addEventListener('load', function () {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.getElementsByClassName('needs-validation');
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function (form) {
-            form.addEventListener('submit', function (event) {
-                if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            }, false);
-        });
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
         }, false);
     })();
-    
 
- </script>
+
+</script>
