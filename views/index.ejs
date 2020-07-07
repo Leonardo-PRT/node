@@ -7,34 +7,6 @@
 
 <div class="col-10">
 
-    <div class="cabecalho">
-        <h2>Transações</h2>
-
-        <%- include('new-trans') %>
-
-    </div>
-    <div class="table-resposive">
-        <table class="table  table-hover table-striped">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Nome</th>
-                    <th>Tipo</th>
-                    <th>valor</th>
-                    <th>Data</th>
-                </tr>
-            </thead>
-            <tbody id="table-body">
-                <tr>
-                    <td>1</td>
-                    <td>Name test</td>
-                    <td>Type test</td>
-                    <td class="text-danger">Value test</td>
-                    <td>00/00/0000</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
     <div class="cards">
         <div id="" class="card text-white bg-success mb-3" style=" box-shadow: 5px 5px rgba(0, 0, 0, 0.425);">
             <div class="card-header">Entrou na conta</div>
@@ -56,7 +28,29 @@
         </div>
     </div>
 
+    <div class="cabecalho">
+        <h2>Transações</h2>
 
+        <%- include('new-trans') %>
+
+    </div>
+
+    <div class="table-resposive">
+        <table class="table  table-hover table-striped" >
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>valor</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+
+            </tbody>
+        </table>
+    </div>
+    
 
 </div>
 

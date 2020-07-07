@@ -5,18 +5,18 @@
 
 
     <%- include('header') %>
-    
+
 
 </head>
 
-<body >
+<body>
     <div class="container-fluid">
 
         <%- body %>
-    
+
     </div>
 
-    <%- include('scripts') %> 
+    <%- include('scripts') %>
 
     <script>
         $("#form").validate({
@@ -64,7 +64,7 @@
                         form.reset()
                         setTimeout(() => { window.location = "/" }, 1)
                     },
-    
+
                     error: function (xhr) {
 
                         try {
@@ -78,5 +78,66 @@
 
             }
         })
+
+        
+
+         function update() {
+
+
+            $.ajax({
+                url: '/api/conta/listar',
+                method: 'get',
+
+                success: data =>{
+                    let tabela = $('#table-body')
+
+                    let html = ''
+                    data.reverse()
+                    
+                    
+                    for (let i = 0; i < data.length; i++) {
+                        const randomnum = Math.floor(Math.random() * 65536)
+
+                        let transaction = data[i]
+
+                        if (transaction.tipo == 'Entrada') {
+
+                            html += 
+                                    `<tr>
+                                        <td>${randomnum}</td>
+                                        <td>${transaction.nome}</td>
+                                        <td class="text-success">${transaction.valor}</td>
+                                        <td>${transaction.dia.slice(8, 10)}/${transaction.dia.slice(5, 7)}/${transaction.dia.slice(0, 4)} </td>
+                                    </tr>`
+
+                        } else {
+                            html += 
+                                    `<tr>
+                                        <td>${randomnum}</td>
+                                        <td>${transaction.nome}</td>
+                                        <td class="text-danger">${transaction.valor}</td>
+                                        <td>${transaction.dia.slice(8, 10)}/${transaction.dia.slice(5, 7)}/${transaction.dia.slice(0, 4)} </td>
+                                    </tr>`
+
+                        }
+
+                    }
+                        
+                    tabela.html(html);
+
+                },
+
+                error: function () {
+                    alert("Alguma coisa deu errada")
+                    
+                    
+
+                }
+
+            })
+
+        }
+
+        update()
     </script>
 </body>
